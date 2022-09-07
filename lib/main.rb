@@ -1,10 +1,10 @@
 def substrings(text, dictionary)
-  matches = {}
+  matches = Hash.new(0)
 
   dictionary.each do |key|
-    matches_count = text.scan(/(#{key})/ix).size
+    matches_count = text.scan(/(#{key})/i).size
 
-    matches[key] = (matches[key] || 0) + matches_count if matches_count.positive?
+    matches[key] += matches_count if matches_count.positive?
   end
 
   matches
