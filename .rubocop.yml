@@ -1,2 +1,14 @@
+require:
+  - rubocop-rspec
+
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+convention:Style/Documentation:
+  Enabled: false
+
+RSpec/BlockLength:
+  Max: 20
+
+RSpec/DescribeClass:
   Enabled: false
